@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pool Table Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <div id="game-container">
+        <div id="player1" class="player-box">Player 1</div>
+        <div id="pool-table">
+            <svg id="table-svg" viewBox="-25 -25 1400 2750" width="700" height="1375" xmlns="http://www.w3.org/2000/svg">
+                <!-- Table felt -->
+                <rect width="1350" height="2700" x="0" y="0" fill="#C0D0C0"></rect>
+                
+                <!-- Cushions -->
+                <rect width="1400" height="25" x="-25" y="-25" fill="darkgreen"></rect>
+                <rect width="1400" height="25" x="-25" y="2700" fill="darkgreen"></rect>
+                <rect width="25" height="2750" x="-25" y="-25" fill="darkgreen"></rect>
+                <rect width="25" height="2750" x="1350" y="-25" fill="darkgreen"></rect>
+                
+                <!-- Pockets -->
+                <circle cx="0" cy="0" r="114" fill="black"></circle>
+                <circle cx="0" cy="1350" r="114" fill="black"></circle>
+                <circle cx="0" cy="2700" r="114" fill="black"></circle>
+                <circle cx="1350" cy="0" r="114" fill="black"></circle>
+                <circle cx="1350" cy="1350" r="114" fill="black"></circle>
+                <circle cx="1350" cy="2700" r="114" fill="black"></circle>
+                <circle cx="1350" cy="1350" r="114" fill="black"></circle>
+                <circle cx="1350" cy="2700" r="114" fill="black"></circle>
+                <!-- balls -->
+                <circle cx="672" cy="640" r="28" fill="YELLOW"></circle>
+                <circle cx="637" cy="580" r="28" fill="BLUE"></circle>            
+                <circle cx="705" cy="580" r="28" fill="RED"></circle>            
+                <circle cx="605" cy="526" r="28" fill="PURPLE"></circle>         
+                <circle cx="673" cy="526" r="28" fill="ORANGE"></circle>         
+                <circle cx="742" cy="526" r="28" fill="GREEN"></circle>
+                <circle cx="574" cy="465" r="28" fill="BROWN"></circle>
+                <circle cx="637" cy="465" r="28" fill="BLACK"></circle>
+                <circle cx="705" cy="465" r="28" fill="LIGHTYELLOW"></circle>
+                <circle cx="772" cy="465" r="28" fill="LIGHTBLUE"></circle>
+                <circle cx="550" cy="408" r="28" fill="PINK"></circle>
+                <circle cx="614" cy="408" r="28" fill="MEDIUMPURPLE"></circle>
+                <circle cx="680" cy="408" r="28" fill="LIGHTSALMON"></circle>
+                <circle cx="746" cy="408" r="28" fill="LIGHTGREEN"></circle>
+                <circle cx="813" cy="408" r="28" fill="SANDYBROWN"></circle>
+                <!-- Cue ball -->
+                <circle id="cue-ball" cx="675" cy="2025" r="28" fill="white"></circle>
+                <line id="direction-line" x1="0" y1="0" x2="0" y2="0" stroke="red" stroke-width="10" visibility="hidden"></line>
+            </svg>
+        </div>
+        <div id="player2" class="player-box">Player 2</div>
+    </div>
+    <div id="bottom-controls">
+        <button id="quit-game">Quit Game</button>
+    </div>
+    <div id="winnerModal" class="modal">
+        <div class="modal-content">
+          <span id="winnerAnnouncement"></span>
+          <button id="restartGame">Start New Game</button>
+        </div>
+      </div>
+    <script src="script.js"></script>
+</body>
+</html>

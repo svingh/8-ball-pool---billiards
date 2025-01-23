@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Setup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-setup-container">
+        <h1>WELCOME TO <span>8</span> BALL POOL</h1>
+        <form id="game-setup" action="/start-game" method="post">
+            <div>
+                <label for="gameName">Game Name:</label>
+                <input type="text" id="gameName" name="gameName" required>
+            </div>
+            <div>
+                <label for="player1">Player 1:</label>
+                <input type="text" id="player1" name="player1" required>
+            </div>
+            <div>
+                <label for="player2">Player 2:</label>
+                <input type="text" id="player2" name="player2" required>
+            </div>
+            <button type="submit">Start Game</button>
+        </form>
+    </div>
+</body>
+</html>
